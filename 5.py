@@ -13,3 +13,21 @@
 # 출발점을 기준으로 서쪽, 남쪽에 있는 경우는 동쪽, 북쪽으로 음수만큼 떨어진 것으로 표현합니다.
 # 출발점으로부터 동쪽으로 2, 북쪽으로 3만큼 떨어졌다면 [2, 3]을 return 합니다.
 # 출발점으로부터 서쪽으로 1, 남쪽으로 4만큼 떨어졌다면 [-1, -4]를 return 합니다.
+
+
+def solution(route):
+    east = 0
+    north = 0
+
+for i in route:
+    if i == "N":
+        north += 1
+    elif i == "S" :
+        north += -1
+    elif i == "E" :
+        east += +1
+
+    elif i == "W":
+        east += -1
+
+    return [east, north]
